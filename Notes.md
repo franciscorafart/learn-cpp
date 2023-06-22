@@ -35,4 +35,7 @@ For example: `std::out << sizeof(bool) << std::endl;`
 - Reference add `&` after variable name
 
 ### Functions
+Like in any programming language functions are a tool to keep code DRY and clean. In c++ we shouldn't over do it as executing a funcion requires many extra steps that will make the code run slower: Create entire stack frame for the function including params, push a return address into the stack, and jump to different part of bunary to execute instructions.
+There's a process called "inlining a function" that the compiler can do to avoid this issue.
 
+Functions with a return type need to return a value, except for the `main` function which is a special type. This is only on Debug mode, it doesn't apply to Release mode.
