@@ -4,10 +4,14 @@ int Multitply(int a, int b){
     return a * b;
 }
 
+void MultiplyAndLog(int a, int b) {
+    int result = a * b;
+    std::cout << result << std::endl; 
+}
+
 int main(){
-    int a = 5;
-    int b = 6;
-    int c = Multitply(a,b);
-    std::cout << c << std::endl;
+    MultiplyAndLog(5, 6);
+    MultiplyAndLog(45, 88);
+    MultiplyAndLog(32, 34);
     std::cin.get();
 }
