@@ -34,3 +34,5 @@ For example: `std::out << sizeof(bool) << std::endl;`
 - Pointer add `*` after variable name
 - Reference add `&` after variable name
 
+### Functions
+
