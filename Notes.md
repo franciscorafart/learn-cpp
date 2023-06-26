@@ -39,3 +39,21 @@ Like in any programming language functions are a tool to keep code DRY and clean
 There's a process called "inlining a function" that the compiler can do to avoid this issue.
 
 Functions with a return type need to return a value, except for the `main` function which is a special type. This is only on Debug mode, it doesn't apply to Release mode.
+
+### Pointers
+Definition: A pointer is a variable that stores an integer /address that corresponds to a location in memory.
+
+```
+int a = 5;
+int* ptr = &a;
+```
+
+In this code we assign an int variable `a` and then creata a pointer `ptr` that stores the reference integer.
+
+Since a pointer is a variable, it can also can have a pointer. This is a double pointer:
+```
+int** = &ptr;
+```
+
+Types are not really important for pointers, the compiler doesn't care about the type.
+
