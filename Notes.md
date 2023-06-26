@@ -57,3 +57,9 @@ int** = &ptr;
 
 Types are not really important for pointers, the compiler doesn't care about the type.
 
+### References
+Pointers and references are technically the same thing, it's just syntax sugar and semantic difference to make it easier to read.
+
+References are not new variables, just references.
+
+You cannont reassign references, because they're not real variables, just aliases. You would be just modifying the value of the original
