@@ -34,6 +34,11 @@ For example: `std::out << sizeof(bool) << std::endl;`
 - Pointer add `*` after variable name
 - Reference add `&` after variable name
 
+### Header Files
+
+- Header files are used to declare certain types of functions. If we write a function in one file and use it in another, we need a place to store the declarations => header files.
+
+
 ### Functions
 Like in any programming language functions are a tool to keep code DRY and clean. In c++ we shouldn't over do it as executing a funcion requires many extra steps that will make the code run slower: Create entire stack frame for the function including params, push a return address into the stack, and jump to different part of bunary to execute instructions.
 There's a process called "inlining a function" that the compiler can do to avoid this issue.
