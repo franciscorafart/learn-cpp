@@ -1,10 +1,3 @@
-//
-//  Log.cpp
-//  LearnCPP
-//
-//  Created by Francisco Rafart on 7/4/23.
-//
-
 #include "Log.hpp"
 
 #include <iostream>

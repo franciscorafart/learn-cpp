@@ -36,8 +36,13 @@ For example: `std::out << sizeof(bool) << std::endl;`
 
 ### Header Files
 
-- Header files are used to declare certain types of functions. If we write a function in one file and use it in another, we need a place to store the declarations => header files.
-
+- Header files are used to declare certain types of functions. If we write a function in
+one file and use it in another, we need a place to store the declarations => header files.
+- Through header files we can copy / paste code from one cpp file into another.
+- Anything that starts with a `#` is a pre-processor command.
+- Header guards. `#pragma once` Adding this pre-processor directive to the header file prevents multiple inclusions of the same header file in the compilation process. With his command the file is marked as 'seen'or 'processed'. => Simpler way of implementing (#ifndef/#define/#endif)
+- #include with curly braces refers to an import with a relative position to the directory. Include with <> refers to specific compiler include directory paths in our computer.
+- Files within the C standard library usually have a <file.h> extension and the ones of the C++ standard library don't have any extensions <file>
 
 ### Functions
 Like in any programming language functions are a tool to keep code DRY and clean. In c++ we shouldn't over do it as executing a funcion requires many extra steps that will make the code run slower: Create entire stack frame for the function including params, push a return address into the stack, and jump to different part of bunary to execute instructions.
