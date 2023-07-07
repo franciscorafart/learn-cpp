@@ -73,3 +73,12 @@ Pointers and references are technically the same thing, it's just syntax sugar a
 References are not new variables, just references.
 
 You cannont reassign references, because they're not real variables, just aliases. You would be just modifying the value of the original
+
+
+### Classes
+- C++ doesn't enforce a certain style of programming, but it has classes so it works well in object oriented programming. 
+- Class => structure to put together data and functionality (variables and functions)
+- When creating a new class you can specify how visible the methods and properties are. By default a class makes them private. Making variables public makes class variables and methods accessible to external code.
+
+### Structs
+The only difference is that classes are private by default
