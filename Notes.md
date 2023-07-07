@@ -88,3 +88,10 @@ The only difference is that classes are private by default and Structs are publi
 - Stylistically, some people (The cherno) use structs to represent simple data structures without a lot of complexity and functionality, like a group of variables to represent some data.
 - Stylistically, a Class would be prefered when there's going to be inheritance and extension down the line.
     
+### Conditions and branches
+- When compiling all source code gets loaded in memory. When we use conditions we tell the application to jump to other parts of that memory.
+- If statmentes and branches carry a bit of overhead beacause of the code jumping in memory. Optimized code will avoid `if` statements.
+
+### Loops
+- To run code repetitively
+- Loops are useful for games, as they keep a program running and updating
