@@ -81,4 +81,10 @@ You cannont reassign references, because they're not real variables, just aliase
 - When creating a new class you can specify how visible the methods and properties are. By default a class makes them private. Making variables public makes class variables and methods accessible to external code.
 
 ### Structs
-The only difference is that classes are private by default
+The only difference is that classes are private by default and Structs are public. In Structs you have to explicitely write `private` to make a property not accessible.
+
+- Even though techically there's no difference besides the default public / private properties, there are stylistic differences in their use.
+- Structs exist in C++ because of the backwards compatibility it wants to maintain with C
+- Stylistically, some people (The cherno) use structs to represent simple data structures without a lot of complexity and functionality, like a group of variables to represent some data.
+- Stylistically, a Class would be prefered when there's going to be inheritance and extension down the line.
+    
