@@ -25,5 +25,6 @@ int main() {
     
     Log(player.x);
     Log(player.y);
+    
     return 0;
 }
