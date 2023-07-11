@@ -34,6 +34,18 @@ For example: `std::out << sizeof(bool) << std::endl;`
 - Pointer add `*` after variable name
 - Reference add `&` after variable name
 
+### Compiler
+- Compiler takes text files of source code and converts it into an intermediate object file.
+- It pre processes code, then createa an abstract syntax tree, and finally creates machine code. 
+- The compiler reates obj file for every C++ file (translation unit). In C++ there's no such thing as a file, a file is just a way to feed the compiler with source code. A translation unit can be made of multiple cpp files if we include them in one another.
+- Stage 1: Pre-processing: 
+    - #include -> Opens file to include and copy pastes its content.
+    -  #define => Looks for first work, and replaces it with whatever follows
+    Example: `#define Log(x) std::cout << x << std::endl;`
+    #if => Conditionally pre proccess code
+- Stage 2: Compile into machine code
+    - 
+
 ### Header Files
 
 - Header files are used to declare certain types of functions. If we write a function in
@@ -95,3 +107,8 @@ The only difference is that classes are private by default and Structs are publi
 ### Loops
 - To run code repetitively
 - Loops are useful for games, as they keep a program running and updating
+
+### Static
+- When inside a class: The variable defined as `static` will share memory with all the instances of the class.
+- When outside of a class in globalscope: The static variable symbol (name) gets assigned only to the tranlation unit (file) it is in, meaning the same variable name can be used in other tranlation units (files) without a linker symbol error.
+- Good practice: Mark function variables as static unless you need them to be linked accross tranlation units (files), else you can run into global scope bugs.
