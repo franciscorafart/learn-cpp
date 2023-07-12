@@ -44,7 +44,14 @@ For example: `std::out << sizeof(bool) << std::endl;`
     Example: `#define Log(x) std::cout << x << std::endl;`
     #if => Conditionally pre proccess code
 - Stage 2: Compile into machine code
-    - 
+    An Obj file has just binary. To make it a little more readable we can compile an assembly file `.asm`
+    
+### Linker
+- After compiling, we have to go through the linking process: Find symbols and functions and link them together.
+- Each cpp file is compiled to its own .obj file, which have no relation between them. We need to link those files together into one program.
+- Compiling and linking errors are separate things. You can compile with no errors, but have link errors. Compile error code starts with C and linker errors start with LNK.
+- Common error: Unresolved external symbol
+- When reusing functions acrross files, kee in mind that including copies code from one file. Avoid function definitions in header files, define the function in a cpp file and just write the declaration on the header file so that other files can use i as well.
 
 ### Header Files
 
