@@ -14,6 +14,19 @@ class Player {
     
 };
 
+// For static explanation purposes
+struct Entity {
+    static int x, y; // public by default
+    
+    void Print() {
+        std::cout << x << ", " << y << std::endl;
+    }
+};
+
+// Has to be defined here because static x and y are not part of the class instance
+int Entity::x;
+int Entity::y;
+
 int main() {
     Player player; // instantiate player object
     
@@ -25,6 +38,19 @@ int main() {
     
     Log(player.x);
     Log(player.y);
+    
+    // static
+    Entity e;
+    e.x = 2;
+    e.y = 3;
+    
+    // e1's x and y are overwriten because they're static
+    Entity e1;
+    e1.x = 5;
+    e1.y = 8;
+    
+    e.Print();
+    e1.Print();
     
     return 0;
 }

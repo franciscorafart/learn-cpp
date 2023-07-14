@@ -116,6 +116,17 @@ The only difference is that classes are private by default and Structs are publi
 - Loops are useful for games, as they keep a program running and updating
 
 ### Static
-- When inside a class: The variable defined as `static` will share memory with all the instances of the class.
-- When outside of a class in globalscope: The static variable symbol (name) gets assigned only to the tranlation unit (file) it is in, meaning the same variable name can be used in other tranlation units (files) without a linker symbol error.
+- When outside of a clas, in the global scope: The static variable symbol (name) gets assigned only to the tranlation unit (file) it is in, meaning the same variable name can be used in other tranlation units (files) without a linker symbol error.
 - Good practice: Mark function variables as static unless you need them to be linked accross tranlation units (files), else you can run into global scope bugs.
+
+
+### Static in a Class
+- Think of static data or static functionaluty => Doesn't change across classes
+- The variable defined as `static` inside a class will share memory with all the instances of the class.
+- With methods it's the same, you can access it without a class instance and also you can't write code.
+- When don't need instances when using static variables and functions.
+- Useful for storing vars and functions required across all instances of a class without putting it on a global namespace.
+- Important: Static methods can't access non static variables, the reason is because static methods don't have an instance.
+
+### Enums
+
