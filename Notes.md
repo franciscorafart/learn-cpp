@@ -126,7 +126,22 @@ The only difference is that classes are private by default and Structs are publi
 - With methods it's the same, you can access it without a class instance and also you can't write code.
 - When don't need instances when using static variables and functions.
 - Useful for storing vars and functions required across all instances of a class without putting it on a global namespace.
-- Important: Static methods can't access non static variables, the reason is because static methods don't have an instance.
+- Important: Static methods can't access non static variables, the reason is because static methods don't have an 
 
-### Enums
+### Constructors
+- Constructor is a special method to initialize classes with default values and space in memory.
+- It has the same name of the class. If you don't define the constructor you still have a default constructor.
+- In C++ you hav to initialize all primitive types, they don't have default values like in other languages.
+```
+class Hello() {
+    public:
+        int X, Y;
+        
+    Hello(int a, int b) { // constructor with params
+        X=a;
+        Y=b;
+    }   
+}
 
+Hello a(5, 9); // initializing with params
+```
