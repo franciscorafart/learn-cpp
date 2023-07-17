@@ -132,6 +132,15 @@ The only difference is that classes are private by default and Structs are publi
 - Constructor is a special method to initialize classes with default values and space in memory.
 - It has the same name of the class. If you don't define the constructor you still have a default constructor.
 - In C++ you hav to initialize all primitive types, they don't have default values like in other languages.
+
+### Destructors
+A destructor is a method that runs when an object is destroyed and cleans memory
+- Works for heap and stack allocated objects
+- Heap (new keyword) => when you `delete` the object the destructor is called
+- Stack based object => When the class code ends (goes out of scope) the object will get deleted automatically with the destructor method.
+- Destructors are important to get rid of unused memory and avoid memory leaks
+- Any memory allocated on the Heap (manually) needs to get deleted manually
+
 ```
 class Hello() {
     public:
@@ -140,8 +149,13 @@ class Hello() {
     Hello(int a, int b) { // constructor with params
         X=a;
         Y=b;
-    }   
+    }
+    
+    ~Hello() { // destructor with `~`   
+        
+    }
 }
 
 Hello a(5, 9); // initializing with params
+
 ```
