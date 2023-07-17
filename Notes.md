@@ -159,3 +159,11 @@ class Hello() {
 Hello a(5, 9); // initializing with params
 
 ```
+
+### Inheritance
+Inheritance between classes is one of the fundamental pillars of object oriented programming.
+- Inheritance prevents code duplication as we can create base classes that have shared code and then make subclasses from base class, like a template.
+- All `public` variables and methods in a class are accessible by classes that inherit from it.
+- Polymorphism: If we have a class B that inherits from A, we can use B whenever we use A because it has everything from the original, B is a superset of A.
+- You  can overwrite functionality and variables in subclasses 
+- In C++ a sublcass will contain everything from its parent class (Banana- Gorilla issue).
