@@ -167,3 +167,13 @@ Inheritance between classes is one of the fundamental pillars of object oriented
 - Polymorphism: If we have a class B that inherits from A, we can use B whenever we use A because it has everything from the original, B is a superset of A.
 - You  can overwrite functionality and variables in subclasses 
 - In C++ a sublcass will contain everything from its parent class (Banana- Gorilla issue).
+
+### Arrays
+- Arrays are pointers
+- Arrays store their data continously in memory
+- When you directly access an array index it looks for an offset of the memory address
+- We can ceate Arrays in the Stack and on the Heap with the `new` keyword
+- One of the biggest uuses of creating an array on the Heap is when a functions returns a new array (not passed via reference), cause if not the array would be deleted the moment the function ends its execution.
+- If you allocate the array on the stack you can use `sizeof` to get its length (in bytes), but there's no realiable way of knowing the size of an array in the Heap.
+- The minute you pass the array into a function you have to keep the size of the array by yourself.
+- C++ 11 has a Standard Array data structure that make a lot of these thing easier. Raw arrays are faster, but standard arrays are safer and easier if you come from another language.  
